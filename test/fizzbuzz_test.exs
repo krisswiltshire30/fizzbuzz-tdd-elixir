@@ -10,4 +10,12 @@ defmodule FizzbuzzTest do
 
     assert capture_io(execute_main) =~ "1\n2"
   end
+
+  test "Should return fizz if divisable by 3" do
+    execute_main = fn ->
+      Fizzbuzz.play(1, 3)
+    end
+
+    assert capture_io(execute_main) =~ "1\n2\nFizz"
+  end
 end
