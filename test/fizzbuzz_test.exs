@@ -26,4 +26,12 @@ defmodule FizzbuzzTest do
 
     assert capture_io(execute_main) =~ "1\n2\nFizz\n4\nBuzz"
   end
+
+  test "Should return FizzBuzz if divisable by 5 and 3" do
+    execute_main = fn ->
+      Fizzbuzz.play(14, 15)
+    end
+
+    assert capture_io(execute_main) =~ "14\nFizzBuzz"
+  end
 end
