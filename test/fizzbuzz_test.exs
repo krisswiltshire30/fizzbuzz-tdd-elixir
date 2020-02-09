@@ -34,4 +34,12 @@ defmodule FizzbuzzTest do
 
     assert capture_io(execute_main) =~ "14\nFizzBuzz"
   end
+
+  test "Should return Fizz, Buzz and Fizzbuzz if applicable" do
+    execute_main = fn ->
+      Fizzbuzz.play(15, 20)
+    end
+
+    assert capture_io(execute_main) =~ "FizzBuzz\n16\n17\nFizz\n19\nBuzz"
+  end
 end
